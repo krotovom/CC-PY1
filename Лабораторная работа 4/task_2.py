@@ -22,12 +22,9 @@ print(get_count_char(main_str))
 # задание 2:
 
 def percent_str(char_dict):
-    char_dict_list = char_dict
-    sum_ = sum(char_dict_list.values())
-    for key, count in char_dict_list.items():
-        if key in char_dict_list:
-            char_dict_list[key] = round((count / sum_ * 100), 1)
-    return char_dict_list
-
+    sum_ = sum(char_dict.values())
+    for key, value in char_dict.items():
+        char_dict[key] = round((value / sum_ * 100), 1)
+    return char_dict
 
 print(percent_str(get_count_char(main_str)))
