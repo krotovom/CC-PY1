@@ -1,9 +1,11 @@
-def random_password(x=8):
-    import string
+import string
+from random import sample
+
+
+def random_password(password_length=8):
     random_ = list(string.ascii_letters)
     random_.extend(string.digits)
-    from random import sample
-    random_pass = "".join(sample(random_, x))
+    random_pass = "".join(sample(random_, password_length))
     return random_pass
 
 
